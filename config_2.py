@@ -8,3 +8,6 @@ class fetch_user_details_variables:
     invalid_headers={
         "Accept":"application/jsons"
     }
+    invalid_xml_header={
+        "Accept": "application/xml"
+    }

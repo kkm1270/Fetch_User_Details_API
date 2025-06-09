@@ -32,4 +32,7 @@ def test_case_8_invalid_format():
     case_8 = requests.get(fdapi.valid_url,headers=fdapi.invalid_headers)
     print(f"Response Message: {case_8.json().get('error')}")
     assert case_8.status_code == 406,"API Request Failed on Invalid Format"
-    
+######################XML_Format##########################################
+def test_case_9_xml_format():
+    case_9 = requests.post(fdapi.valid_url,headers=fdapi.invalid_xml_header)
+    assert case_9.status_code == 406, "API Request Failed on XML Format"
